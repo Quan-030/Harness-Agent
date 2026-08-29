@@ -1,5 +1,9 @@
 # Harness Agent
 
+## 界面预览
+
+![Harness Agent 页面预览](docs/images/harness-agent-ui.png)
+
 ## 技术栈
 
 - **Agent 框架**: LangGraph、DeepAgents
