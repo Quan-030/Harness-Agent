@@ -1,0 +1,182 @@
+/**
+ * 全局样式 — 设计令牌唯一来源
+ *
+ * 风格：安静的专业工具（暖石色中性底 + 单一深青绿强调色，无渐变）。
+ * 规则：组件内禁止硬编码颜色/圆角/阴影，一律消费此处令牌。
+ */
+
+/* ============================================================
+   设计令牌
+   ============================================================ */
+:root {
+  /* 中性色 — 暖石色 */
+  --bg-app: #faf9f7;
+  --bg-surface: #ffffff;
+  --bg-sunken: #f5f4f1;
+  --bg-hover: #efedea;
+  --border: #e7e5e1;
+  --border-strong: #d6d3cd;
+  --text: #1f1d1a;
+  --text-secondary: #57534c;
+  --text-muted: #8a857c;
+
+  /* 强调色 — 深青绿（唯一品牌色） */
+  --accent: #0f766e;
+  --accent-hover: #0d635c;
+  --accent-soft: #e9f2f1;
+  --accent-border: #c2d8d5;
+
+  /* 语义色（实色 + 浅底成对） */
+  --success: #15803d;
+  --success-soft: #ecf5ee;
+  --warning: #b45309;
+  --warning-soft: #faf3e7;
+  --warning-border: #ecdcc3;
+  --danger: #b91c1c;
+  --danger-soft: #f9eded;
+  --danger-border: #ecc8c8;
+
+  /* 圆角（三档） */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* 阴影（两档，无 glow） */
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.06);
+  --shadow-md: 0 2px 8px rgba(28, 25, 23, 0.08);
+
+  /* 动效 */
+  --transition: 0.15s ease;
+
+  /* 字体 */
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code",
+    Consolas, "Liberation Mono", monospace;
+}
+
+/* ============================================================
+   基础重置
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-app);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   滚动条
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ============================================================
+   工具类
+   ============================================================ */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.p-2 {
+  padding: 8px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+/* ============================================================
+   按钮基础
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition),
+    color var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+}

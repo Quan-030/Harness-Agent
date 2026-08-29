@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96">
+  <!-- icon: minimal line-art motorcycle -->
+  <g fill="none" stroke="#fb3a4e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="translate(10,14) scale(0.9)">
+    <circle cx="18" cy="46" r="13"/>
+    <circle cx="82" cy="46" r="13"/>
+    <path d="M18 46 H52"/>
+    <path d="M44 24 L52 46"/>
+    <path d="M66 18 L52 46"/>
+    <path d="M22 19 L28 24 H44"/>
+    <path d="M44 24 C50 20 58 18 66 18"/>
+    <path d="M66 18 L82 46"/>
+    <path d="M66 18 L58 11"/>
+  </g>
+  <g transform="translate(10,14) scale(0.9)" fill="#fb3a4e">
+    <circle cx="18" cy="46" r="2.5"/>
+    <circle cx="82" cy="46" r="2.5"/>
+  </g>
+  <text x="118" y="61" font-family="'Montserrat','Poppins','Segoe UI',system-ui,-apple-system,sans-serif" font-size="40" font-weight="700" letter-spacing="0.5">
+    <tspan fill="#1f2937">Quan</tspan><tspan fill="#fb3a4e">Motor</tspan>
+  </text>
+</svg>
